@@ -30,15 +30,15 @@ CODE = (environ.get('CODE', 'https://graph.org/file/e419f801841c2ee3db0fc.jpg'))
 
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6646028262').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001881877723').split()] #Channel id for auto indexing ( make sure bot is admin )
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001970548842')) #Log channel id ( make sure bot is admin )
-DEENDAYAL_MOVIE_UPDATE_CHANNEL = int(environ.get('DEENDAYAL_MOVIE_UPDATE_CHANNEL', '-1001970548842')) #Notification of those who verify will be sent to your channel. Enter the ID of the channel you want to send notification to here.
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1001970548842')) # add premium logs channel id
-auth_channel = environ.get('AUTH_CHANNEL', '') #Channel / Group Id for force sub ( make sure bot is admin )
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6976744562').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002196942185').split()] #Channel id for auto indexing ( make sure bot is admin )
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002400133611')) #Log channel id ( make sure bot is admin )
+DEENDAYAL_MOVIE_UPDATE_CHANNEL = int(environ.get('DEENDAYAL_MOVIE_UPDATE_CHANNEL', '-1002198886089')) #Notification of those who verify will be sent to your channel. Enter the ID of the channel you want to send notification to here.
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002198886089')) # add premium logs channel id
+auth_channel = environ.get('-1002198886089', '') #Channel / Group Id for force sub ( make sure bot is admin )
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1002474691060').split()]
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '') # support group id ( make sure bot is admin )
-reqst_channel = environ.get('REQST_CHANNEL_ID', '') # request channel id ( make sure bot is admin ).
+reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002164413929') # request channel id ( make sure bot is admin ).
 
 
 # MongoDB information
@@ -49,12 +49,12 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 # index movie Notification & update channel 
 DEENDAYAL_MOVIE_UPDATE_NOTIFICATION = bool(environ.get('DEENDAYAL_MOVIE_UPDATE_NOTIFICATION', True))  # NOTIFICATION On ( True ) / Off ( False )
 DEENDAYAL_IMAGE_FETCH = bool(environ.get('DEENDAYAL_IMAGE_FETCH', True))  #  On ( True ) / Off ( False )
-CAPTION_LANGUAGES = ["Bhojpuri", "Hindi", "Bengali", "Tamil", "English", "Bangla", "Telugu", "Malayalam", "Kannada", "Marathi", "Punjabi", "Bengoli", "Gujrati", "Korean", "Gujarati", "Spanish", "French", "German", "Chinese", "Arabic", "Portuguese", "Russian", "Japanese", "Odia", "Assamese", "Urdu"]
+CAPTION_LANGUAGES = ["Hindi", "Bengali", "Tamil", "English", "Bangla", "Telugu", "Malayalam", "Kannada", "Marathi", "Punjabi", "Bengoli", "Gujrati", "Korean", "Gujarati", "Spanish", "French", "German", "Chinese", "Arabic", "Portuguese", "Russian", "Japanese", "Odia", "Assamese", "Urdu"]
 
 
 
 # Verify
-VERIFY = bool(environ.get('VERIFY', True)) # Verification On ( True ) / Off ( False )
+VERIFY = bool(environ.get('VERIFY', False)) # Verification On ( True ) / Off ( False )
 DEENDAYAL_VERIFY_EXPIRE = int(environ.get('DEENDAYAL_VERIFY_EXPIRE', 24)) # Add time in hours
 DEENDAYAL_VERIFIED_LOG = int(environ.get('DEENDAYAL_VERIFIED_LOG', '-1002370988072')) #Log channel id ( make sure bot is admin )
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/Deenu_dhakad') # How to open tutorial link for verification
@@ -67,9 +67,9 @@ TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Deenu_dhakad') # Tutorial video
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 
 #Channel & Group link 
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+kF6kYm_7o_wxM2E1')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Deendayal_dhakad')
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Sorry_Sorry_Galti_Ho_Gai')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/RM_Movie_Request')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/RM_Movie_Flix')
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Rahat146Tm')
 
 
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
@@ -103,7 +103,7 @@ MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), False)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), True)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 
-LANGUAGES = ["malayalam", "", "tamil", "", "english", "", "hindi", "", "telugu", "", "kannada", "", "gujarati", "", "marathi", "", "punjabi", ""]
+LANGUAGES = ["Bengali", "", "tamil", "", "english", "", "hindi", "", "telugu", "", "kannada", "", "gujarati", "", "marathi", "", "punjabi", ""]
 
 SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "season 6" , "season 7" , "season 8" , "season 9" , "season 10"]
 
@@ -140,7 +140,7 @@ else:
     URL = "http://{}/".format(FQDN)
 
 #ADD_REACTION
-REACTIONS = ["❤️‍🔥", "♥️", "🔥", "🙋"]
+REACTIONS = ["❤️‍🔥", "😇", "♥️", "🔥", "🙋"]
 
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
